@@ -14,7 +14,7 @@ def job_ingest():
         logger.info("job_ingest start")
         response = utility_api_linz.utility_api_linz_get('2026-04-20','2026-04-26', 'layer-113968-changeset')
         print(response['data'])
-        logger.info("job_ingest end " + response['status'])
+        logger.info("job_ingest end")
     except Exception as e:
         logger.info(e)
 
