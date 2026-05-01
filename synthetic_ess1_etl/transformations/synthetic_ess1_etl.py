@@ -12,6 +12,13 @@ json_schema = StructType([
     StructField("properties", StringType(), True)  # Using STRING for VARIANT compatibility
 ])
 
+# Define the schema for geometry JSON - update with actual field names
+geometry_schema = StructType([
+    StructField("type", StringType(), True),
+    StructField("coordinates", StringType(), True),
+    # Add more fields as needed based on your JSON structure
+])
+
 # Define the schema for properties JSON - update with actual field names
 properties_schema = StructType([
     StructField("__change__", StringType(), True),
@@ -20,12 +27,7 @@ properties_schema = StructType([
     # Add more fields as needed based on your JSON structure
 ])
 
-# Define the schema for geometry JSON - update with actual field names
-geometry_schema = StructType([
-    StructField("type", StringType(), True),
-    StructField("coordinates", StringType(), True),
-    # Add more fields as needed based on your JSON structure
-])
+
 
 # synthetic ess2 Ingest from Google Drive ---
 # Auto Loader (cloudFiles) detects new files from your GDrive connection
