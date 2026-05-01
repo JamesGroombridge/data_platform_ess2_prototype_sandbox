@@ -1,7 +1,6 @@
 import logging
 from datetime import datetime
 from pyspark.sql.types import StructType, StructField, StringType, TimestampType
-
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder \
