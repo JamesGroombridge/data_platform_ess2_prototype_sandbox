@@ -1,0 +1,13 @@
+linz_data_configuration:
+  - name: property_unit_of_property
+    layer: layer-113968
+    changeset_layer: layer-113968-changeset
+    drive: 17NnUwQYh6lvHrk41Cbvju-PgtqwTejKu
+    target: linz_property_unit of_property
+    changeset_period: 7
+  - name: property_property_titles
+    layer: layer-50804
+    changeset_layer: layer-50804-changeset
+    drive: 1bVnE6JSRiba3hYn-_KmExABMP_iEL6Kd
+    target: linz_property_unit of_property
+    changeset_period: 7  
