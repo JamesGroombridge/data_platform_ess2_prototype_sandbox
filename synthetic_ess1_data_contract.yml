@@ -1,0 +1,50 @@
+dataContractSpecification: 1.0.0
+id: linz_property_unit_of_property_contract
+
+info:
+  title: property_unit_of_property_contract
+  version: 1.0.0
+
+models:
+  feature_table:
+    type: object
+    properties:
+      type:
+        type: string
+        enum: ["Feature"]
+
+      id:
+        type: string
+        format: uuid
+
+      geometry:
+        type: object
+        nullable: true
+
+      geometry_name:
+        type: string
+
+      properties:
+        type: object
+        additionalProperties: false
+        properties:
+          change_type:
+            type: string
+            enum: [INSERT, UPDATE, DELETE]
+
+          property_name:
+            type: string
+            nullable: true
+
+          unit_of_property_id:
+            type: string
+            format: uuid
+
+        required:
+          - change_type
+          - unit_of_property_id
+
+    required:
+      - type
+      - id
+      - properties

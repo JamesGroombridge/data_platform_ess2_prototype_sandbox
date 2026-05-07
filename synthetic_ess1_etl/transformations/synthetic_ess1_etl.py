@@ -72,6 +72,6 @@ dp.create_auto_cdc_flow(
     source="raw_gdrive_data",
     keys=["id"],  # Primary key - update if unit_of_property_id is more appropriate
     sequence_by="processing_timestamp",  # Timestamp column for sequencing - __START_AT and __END_AT will be timestamps
-    #apply_as_deletes="__change__ = 'DELETE'",  # Identify DELETE operations to properly set __END_AT
+    #apply_as_deletes="__change__ = 'DELETE'",  # Identify DELETE operations to properly #set __END_AT
     stored_as_scd_type=2  # SCD Type 2: Enables historical tracking with __START_AT and __END_AT columns
 )
